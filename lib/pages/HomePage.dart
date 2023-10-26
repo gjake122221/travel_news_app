@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/LocalData.dart';
+import 'Page_home.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +16,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var widthofcontext = MediaQuery.of(context).size.width;
     var heightofcontext = MediaQuery.of(context).size.height;
-    var getdata = DataSets();
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: NavigationBar(
@@ -27,33 +27,29 @@ class _HomePageState extends State<HomePage> {
           selectedIndex: currentPageIndex,
           destinations: [
             NavigationDestination(
-              icon: getdata.getImages('home_unselected_icon'),
-              selectedIcon: getdata.getImages('home_selected_icon'),
+              icon: DataSets().getImages('home_unselected_icon'),
+              selectedIcon: DataSets().getImages('home_selected_icon'),
               label: '',
             ),
             NavigationDestination(
-              icon: getdata.getImages('bookmark_unselected_icon'),
-              selectedIcon: getdata.getImages('bookmark_selected_icon'),
+              icon: DataSets().getImages('bookmark_unselected_icon'),
+              selectedIcon: DataSets().getImages('bookmark_selected_icon'),
               label: '',
             ),
             NavigationDestination(
-              icon: getdata.getImages('notification_unselected_icon'),
-              selectedIcon: getdata.getImages('notification_selected_icon'),
+              icon: DataSets().getImages('notification_unselected_icon'),
+              selectedIcon: DataSets().getImages('notification_selected_icon'),
               label: '',
             ),
             NavigationDestination(
-              icon: getdata.getImages('profile_unselected_icon'),
-              selectedIcon: getdata.getImages('profile_selected_icon'),
+              icon: DataSets().getImages('profile_unselected_icon'),
+              selectedIcon: DataSets().getImages('profile_selected_icon'),
               label: '',
             ),
           ],
         ),
         body: <Widget>[
-          Container(
-            width: widthofcontext,
-            height: heightofcontext,
-            color: Colors.red,
-          ),
+          Page_Home(),
           Container(
             width: widthofcontext,
             height: heightofcontext,
