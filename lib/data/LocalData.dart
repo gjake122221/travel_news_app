@@ -101,7 +101,7 @@ var userPost = [
     'description':
         'Dive into the bustling Alona Beach, where modernity meets tradition, from high-tech districts to serene temples and gardens.',
     'date': 'May 5, 2021',
-    'popularity': '0',
+    'popularity': '6390',
     'Image': getImage('pictures/alona_beach.jpg'),
   },
   {
@@ -111,7 +111,7 @@ var userPost = [
     'description':
         'Experience the tranquil beauty of Big Lagoon with its stunning beaches, lush jungles, and rich culture, perfect for relaxation and exploration',
     'date': 'July 1, 2023',
-    'popularity': '1',
+    'popularity': '6161',
     'Image': getImage('pictures/big_lagoon.jpg'),
   },
   {
@@ -121,7 +121,7 @@ var userPost = [
     'description':
         'Walk through history in the Eternal Fort, where ancient ruins, world-renowned art, and delectable cuisine await at every turn.',
     'date': 'July 26, 2022',
-    'popularity': '0',
+    'popularity': '5760',
     'Image': getImage('pictures/fort_san_pedro.jpg'),
   },
   {
@@ -131,7 +131,7 @@ var userPost = [
     'description':
         ' Experience the mystical beauty of Machu Picchu, the ancient Chapel nestled in the Cebu City, shrouded in history and mystery.',
     'date': 'February 20, 2022',
-    'popularity': '1',
+    'popularity': '5263',
     'Image': getImage('pictures/magellans_cross.jpg'),
   },
   {
@@ -141,7 +141,7 @@ var userPost = [
     'description':
         'Discover the awe-inspiring beauty and geological wonders of Mount Pinatubo in the Philippines. Once a dormant volcano, Mount Pinatubo erupted in 1991, leaving behind a breathtaking landscape of rugged terrain, azure crater lakes, and a unique opportunity for adventurous trekking and exploration. This natural wonder offers a glimpse into the powerful forces that shape our planet, making it a must-visit destination for nature enthusiasts and thrill-seekers alike.',
     'date': 'September 30, 2022',
-    'popularity': '1',
+    'popularity': '6108',
     'Image': getImage('pictures/mount_pinatubo.jpg'),
   },
   {
@@ -151,7 +151,7 @@ var userPost = [
     'description':
         'Escape to the serene shores of this hidden gem, where the soft sands meet the gentle caress of the crystal-clear waves. With the sun on your skin and the sound of seagulls in the air, youll find a perfect sanctuary for relaxation and recreation. Whether youre building sandcastles with the family, taking a leisurely stroll along the waters edge, or simply basking in the warmth of the sun, this beach offers a slice of paradise where you can unwind and rejuvenate.',
     'date': 'December 17, 2023',
-    'popularity': '0',
+    'popularity': '6237',
     'Image': getImage('pictures/saud_beach.jpg'),
   },
   {
@@ -161,7 +161,7 @@ var userPost = [
     'description':
         'Embark on a journey to the "Secret Lagoon," a well-guarded natural treasure tucked away from the beaten path. This secluded oasis promises a taste of paradise, with its emerald waters, surrounded by lush greenery and dramatic rock formations. As you dip into the tranquil lagoon, youll feel like youve stumbled upon a hidden gem, far from the crowds, offering a serene and intimate experience with nature. Its the perfect escape for those seeking solace and the beauty of untouched landscapes.',
     'date': 'January 20, 2021',
-    'popularity': '1',
+    'popularity': '6979',
     'Image': getImage('pictures/secret_lagon.jpg'),
   },
   {
@@ -171,7 +171,7 @@ var userPost = [
     'description':
         'Experience the pure, unspoiled beauty of Talipanan Beach, a hidden paradise nestled in the Philippines. This secluded gem offers a peaceful and idyllic escape, where the soft sands meet the gentle lapping of the turquoise waves. Surrounded by lush tropical greenery and the towering mountains of Mindoro, Talipanan Beach is the perfect haven for those seeking tranquility and natural beauty. Whether youre enjoying a leisurely swim, exploring the nearby forests, or simply lounging on the pristine shore, Talipanan Beach provides a serene retreat away from the hustle and bustle of city life.',
     'date': 'April 22, 2021',
-    'popularity': '0',
+    'popularity': '6833',
     'Image': getImage('pictures/talipanan_beach.jpg'),
   },
   {
@@ -181,7 +181,7 @@ var userPost = [
     'description':
         'Explore the Taoist Temple, an oasis of tranquility hidden amidst the bustling urban landscape. Nestled in [insert location], this spiritual sanctuary offers a glimpse into ancient Chinese traditions and a respite from the citys chaos. Ascend the grand staircase, adorned with intricate dragon motifs, to reach the temples main hall, where you can light incense and make a wish. The architecture, ornate decorations, and panoramic views from the temple grounds make it a place for contemplation and relaxation, offering a unique blend of culture and calm in the heart of the city.',
     'date': 'October 22, 2021',
-    'popularity': '1',
+    'popularity': '5362',
     'Image': getImage('pictures/taoist_temple.jpg'),
   },
 ];

@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../data/LocalData.dart';
 import '../layouts/largecardlayout.dart';
+import '../layouts/smallcardlayout.dart';
 
 class PageHome extends StatelessWidget {
   const PageHome({super.key});
@@ -27,7 +28,8 @@ class PageHome extends StatelessWidget {
               subtitle: Text('#DD-00-MM'),
             ),
             SearchBar(
-              shape: MaterialStatePropertyAll(RoundedRectangleBorder()),
+              shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10))),
               elevation: MaterialStatePropertyAll(0),
               backgroundColor: MaterialStatePropertyAll(Color(0xFFF3F1F1)),
               hintStyle: MaterialStatePropertyAll(
@@ -84,32 +86,7 @@ class PageHome extends StatelessWidget {
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-                        children: [
-                          Card(
-                            child: SizedBox(
-                              width: 200,
-                              height: 80,
-                            ),
-                          ),
-                          Card(
-                            child: SizedBox(
-                              width: 200,
-                              height: 80,
-                            ),
-                          ),
-                          Card(
-                            child: SizedBox(
-                              width: 200,
-                              height: 80,
-                            ),
-                          ),
-                          Card(
-                            child: SizedBox(
-                              width: 200,
-                              height: 80,
-                            ),
-                          )
-                        ],
+                        children: smallCardLayout,
                       ),
                     ),
                   ),

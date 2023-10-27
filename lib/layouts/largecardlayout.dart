@@ -26,6 +26,7 @@ class LargeCardLayout extends StatelessWidget {
     double imageWidth = 200;
     double imageHeight = 120;
     return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: SizedBox(
         width: bigcardWidth,
         height: bigcardHeight,
