@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../data/LocalData.dart';
 import 'Pagehome.dart';
@@ -27,29 +28,31 @@ class _HomePageState extends State<HomePage> {
           selectedIndex: currentPageIndex,
           destinations: [
             NavigationDestination(
-              icon: DataSets().getImage('icons/home_unselected_icon', 'svg'),
-              selectedIcon:
-                  DataSets().getImage('icons/home_selected_icon', 'svg'),
-              label: '',
-            ),
-            NavigationDestination(
               icon:
-                  DataSets().getImage('icons/bookmark_unselected_icon', 'svg'),
+                  SvgPicture.asset(getImage('icons/home_unselected_icon.svg')),
               selectedIcon:
-                  DataSets().getImage('icons/bookmark_selected_icon', 'svg'),
+                  SvgPicture.asset(getImage('icons/home_selected_icon.svg')),
               label: '',
             ),
             NavigationDestination(
-              icon: DataSets()
-                  .getImage('icons/notification_unselected_icon', 'svg'),
-              selectedIcon: DataSets()
-                  .getImage('icons/notification_selected_icon', 'svg'),
+              icon: SvgPicture.asset(
+                  getImage('icons/bookmark_unselected_icon.svg')),
+              selectedIcon: SvgPicture.asset(
+                  getImage('icons/bookmark_selected_icon.svg')),
               label: '',
             ),
             NavigationDestination(
-              icon: DataSets().getImage('icons/profile_unselected_icon', 'svg'),
+              icon: SvgPicture.asset(
+                  getImage('icons/notification_unselected_icon.svg')),
+              selectedIcon: SvgPicture.asset(
+                  getImage('icons/notification_selected_icon.svg')),
+              label: '',
+            ),
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                  getImage('icons/profile_unselected_icon.svg')),
               selectedIcon:
-                  DataSets().getImage('icons/profile_selected_icon', 'svg'),
+                  SvgPicture.asset(getImage('icons/profile_selected_icon.svg')),
               label: '',
             ),
           ],

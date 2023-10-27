@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../data/LocalData.dart';
+import '../layouts/largecardlayout.dart';
 
 class PageHome extends StatelessWidget {
   const PageHome({super.key});
@@ -18,11 +20,11 @@ class PageHome extends StatelessWidget {
           children: [
             ListTile(
               leading: CircleAvatar(
-                child:
-                    DataSets().getImage('icons/profile_selected_icon', 'svg'),
+                child: SvgPicture.asset(
+                    getImage('icons/profile_selected_icon.svg')),
               ),
               title: Text('Welcom Back'),
-              subtitle: Text('#DD-00-mm'),
+              subtitle: Text('#DD-00-MM'),
             ),
             SearchBar(
               shape: MaterialStatePropertyAll(RoundedRectangleBorder()),
@@ -38,7 +40,7 @@ class PageHome extends StatelessWidget {
                   child: SizedBox(
                     width: 30,
                     height: 50,
-                    child: DataSets().getImage('icons/search_icon', 'svg'),
+                    child: SvgPicture.asset(getImage('icons/search_icon.svg')),
                   ),
                 ),
               ],
@@ -60,32 +62,7 @@ class PageHome extends StatelessWidget {
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children: [
-                    Card(
-                      child: SizedBox(
-                        width: 200,
-                        height: 250,
-                      ),
-                    ),
-                    Card(
-                      child: SizedBox(
-                        width: 200,
-                        height: 250,
-                      ),
-                    ),
-                    Card(
-                      child: SizedBox(
-                        width: 200,
-                        height: 250,
-                      ),
-                    ),
-                    Card(
-                      child: SizedBox(
-                        width: 200,
-                        height: 250,
-                      ),
-                    )
-                  ],
+                  children: largeCardLayout,
                 ),
               ),
             ),
