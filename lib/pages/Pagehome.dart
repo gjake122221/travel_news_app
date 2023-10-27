@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../data/LocalData.dart';
 
-class Page_Home extends StatelessWidget {
-  const Page_Home({super.key});
+class PageHome extends StatelessWidget {
+  const PageHome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,8 @@ class Page_Home extends StatelessWidget {
           children: [
             ListTile(
               leading: CircleAvatar(
-                child: DataSets().getImages('profile_selected_icon'),
+                child:
+                    DataSets().getImage('icons/profile_selected_icon', 'svg'),
               ),
               title: Text('Welcom Back'),
               subtitle: Text('#DD-00-mm'),
@@ -37,7 +38,7 @@ class Page_Home extends StatelessWidget {
                   child: SizedBox(
                     width: 30,
                     height: 50,
-                    child: DataSets().getImages('search_icon'),
+                    child: DataSets().getImage('icons/search_icon', 'svg'),
                   ),
                 ),
               ],

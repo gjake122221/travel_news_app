@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/LocalData.dart';
-import 'Page_home.dart';
+import 'Pagehome.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,29 +27,35 @@ class _HomePageState extends State<HomePage> {
           selectedIndex: currentPageIndex,
           destinations: [
             NavigationDestination(
-              icon: DataSets().getImages('home_unselected_icon'),
-              selectedIcon: DataSets().getImages('home_selected_icon'),
+              icon: DataSets().getImage('icons/home_unselected_icon', 'svg'),
+              selectedIcon:
+                  DataSets().getImage('icons/home_selected_icon', 'svg'),
               label: '',
             ),
             NavigationDestination(
-              icon: DataSets().getImages('bookmark_unselected_icon'),
-              selectedIcon: DataSets().getImages('bookmark_selected_icon'),
+              icon:
+                  DataSets().getImage('icons/bookmark_unselected_icon', 'svg'),
+              selectedIcon:
+                  DataSets().getImage('icons/bookmark_selected_icon', 'svg'),
               label: '',
             ),
             NavigationDestination(
-              icon: DataSets().getImages('notification_unselected_icon'),
-              selectedIcon: DataSets().getImages('notification_selected_icon'),
+              icon: DataSets()
+                  .getImage('icons/notification_unselected_icon', 'svg'),
+              selectedIcon: DataSets()
+                  .getImage('icons/notification_selected_icon', 'svg'),
               label: '',
             ),
             NavigationDestination(
-              icon: DataSets().getImages('profile_unselected_icon'),
-              selectedIcon: DataSets().getImages('profile_selected_icon'),
+              icon: DataSets().getImage('icons/profile_unselected_icon', 'svg'),
+              selectedIcon:
+                  DataSets().getImage('icons/profile_selected_icon', 'svg'),
               label: '',
             ),
           ],
         ),
         body: <Widget>[
-          Page_Home(),
+          PageHome(),
           Container(
             width: widthofcontext,
             height: heightofcontext,
