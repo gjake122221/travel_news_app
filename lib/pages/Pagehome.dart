@@ -59,15 +59,7 @@ class PageHome extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: largeCardLayout,
-                ),
-              ),
-            ),
+            LargeCardLayout(usersProfile, userPost),
             Padding(
               padding: const EdgeInsets.only(
                 top: 10,
@@ -81,15 +73,7 @@ class PageHome extends StatelessWidget {
                       TextButton(onPressed: () => '', child: Text('View All'))
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 0),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: smallCardLayout,
-                      ),
-                    ),
-                  ),
+                  SmallCardLayout(userPost),
                 ],
               ),
             )
