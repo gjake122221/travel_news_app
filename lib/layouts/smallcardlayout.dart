@@ -26,53 +26,57 @@ class SmallCardLayout extends StatelessWidget {
       double smallcardHeight = 70;
       double imageWidth = 70;
       double imageHeight = 60;
-      return Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        child: SizedBox(
-          width: smallcardWidth,
-          height: smallcardHeight,
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(4.0),
-                child: SizedBox(
-                  width: imageWidth,
-                  height: imageHeight,
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.asset(
-                        '${popularPost[index]['Image']}',
-                        fit: BoxFit.fill,
-                      )),
+      return GestureDetector(
+        onTap: () => print('image'),
+        child: Card(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          child: SizedBox(
+            width: smallcardWidth,
+            height: smallcardHeight,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: SizedBox(
+                    width: imageWidth,
+                    height: imageHeight,
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.asset(
+                          '${popularPost[index]['Image']}',
+                          fit: BoxFit.fill,
+                        )),
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '${popularPost[index]['name']}',
-                      style: TextStyle(fontSize: 14),
-                    ),
-                    Text(
-                      '${popularPost[index]['date']}',
-                      style: TextStyle(fontSize: 10),
-                    ),
-                    Row(
-                      children: [
-                        SvgPicture.asset(getImage('icons/eye_icon.svg')),
-                        Text(
-                          ' ${popularPost[index]['popularity']}',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              )
-            ],
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '${popularPost[index]['name']}',
+                        style: TextStyle(fontSize: 14),
+                      ),
+                      Text(
+                        '${popularPost[index]['date']}',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                      Row(
+                        children: [
+                          SvgPicture.asset(getImage('icons/eye_icon.svg')),
+                          Text(
+                            ' ${popularPost[index]['popularity']}',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       );
