@@ -21,7 +21,7 @@ class SmallCardLayout extends StatelessWidget {
 
   List<Map<String, String>> selectPost() {
     List<Map<String, String>> popularPost = [];
-    for (var post in userPost) {
+    for (var post in post) {
       if (int.parse('${post['popularity']}') >= 6000) {
         popularPost.add(post);
       }

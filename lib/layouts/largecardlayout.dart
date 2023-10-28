@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../data/LocalData.dart';
 import '../pages/PageNews.dart';
+import '../pages/PageProfile.dart';
 
 class LargeCardLayout extends StatelessWidget {
   LargeCardLayout(this.user, this.post);
@@ -17,6 +18,16 @@ class LargeCardLayout extends StatelessWidget {
       }
     }
     return name;
+  }
+
+  String getID(index) {
+    var id = '';
+    for (var userid in user) {
+      if ('${userid['userid']}' == '${post[index]['userid']}') {
+        id = '${userid['userid']}';
+      }
+    }
+    return id;
   }
 
   @override
@@ -97,7 +108,12 @@ class LargeCardLayout extends StatelessWidget {
                         ),
                       ),
                     ),
-                    onTap: () => print('profile'),
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => PageProfile(getID(index), user, post),
+                      ),
+                    ),
                   ),
                 ],
               ),
