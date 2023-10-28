@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../data/LocalData.dart';
+import '../pages/PageNews.dart';
 
 class LargeCardLayout extends StatelessWidget {
   LargeCardLayout(this.user, this.post);
@@ -27,7 +28,16 @@ class LargeCardLayout extends StatelessWidget {
       double imageWidth = 250;
       double imageHeight = 140;
       return GestureDetector(
-        onTap: () => print('image'),
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => PageNews(
+                getUserName(index),
+                '${post[index]['title']}',
+                '${post[index]['description']}',
+                '${post[index]['Image']}'),
+          ),
+        ),
         child: Material(
           elevation: 1,
           child: Card(

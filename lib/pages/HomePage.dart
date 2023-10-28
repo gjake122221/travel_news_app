@@ -15,8 +15,6 @@ class _HomePageState extends State<HomePage> {
   int currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
-    var widthofcontext = MediaQuery.of(context).size.width;
-    var heightofcontext = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: NavigationBar(
@@ -59,21 +57,9 @@ class _HomePageState extends State<HomePage> {
         ),
         body: <Widget>[
           PageHome(),
-          Container(
-            width: widthofcontext,
-            height: heightofcontext,
-            color: Colors.blue,
-          ),
-          Container(
-            width: widthofcontext,
-            height: heightofcontext,
-            color: Colors.amber,
-          ),
-          Container(
-            width: widthofcontext,
-            height: heightofcontext,
-            color: Colors.orange,
-          ),
+          Placeholder(),
+          Placeholder(),
+          Placeholder(),
         ][currentPageIndex],
       ),
     );
