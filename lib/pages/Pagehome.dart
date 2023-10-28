@@ -73,7 +73,7 @@ class PageHome extends StatelessWidget {
                       TextButton(onPressed: () => '', child: Text('View All'))
                     ],
                   ),
-                  SmallCardLayout(userPost),
+                  SmallCardLayout(usersProfile, userPost),
                 ],
               ),
             )

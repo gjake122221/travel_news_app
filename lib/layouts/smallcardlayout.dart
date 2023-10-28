@@ -2,10 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../data/LocalData.dart';
+import '../pages/PageNews.dart';
 
 class SmallCardLayout extends StatelessWidget {
-  SmallCardLayout(this.post);
+  SmallCardLayout(this.user, this.post);
+  final List<Map<String, String>> user;
   final List<Map<String, String>> post;
+
+  String getUserName(index, popularPost) {
+    var name = '';
+    for (var userid in user) {
+      if ('${userid['userid']}' == '${popularPost[index]['userid']}') {
+        name = '${userid['fname']} ${userid['lname']}';
+      }
+    }
+    return name;
+  }
 
   List<Map<String, String>> selectPost() {
     List<Map<String, String>> popularPost = [];
@@ -27,7 +39,16 @@ class SmallCardLayout extends StatelessWidget {
       double imageWidth = 70;
       double imageHeight = 60;
       return GestureDetector(
-        onTap: () => print('image'),
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => PageNews(
+                getUserName(index, popularPost),
+                '${popularPost[index]['title']}',
+                '${popularPost[index]['description']}',
+                '${popularPost[index]['Image']}'),
+          ),
+        ),
         child: Card(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
